@@ -1,22 +1,23 @@
 @echo off
+color
 path=%path%;"C:\Program Files\WinRAR"
 title File Builder
 if NOT EXIST release md release
 echo [BatPPT Release Builder] -by Icy
-echo °´ÈÎÒâ¼ü¿ªÊ¼build
+echo æŒ‰ä»»æ„é”®å¼€å§‹build
 set /a a=1
 pause >nul
 :start
-echo [µÚ %a% ´Îbuild]
+echo [ç¬¬ %a% æ¬¡build]
 set /a a=%a%+1
 rar a pack.rar pack
 rd /s /q release
 md release
 echo Start...
 copy /b main.bat+pack.rar "release\batppt.bat"
-echo OK£¬releaseÎÄ¼þ¡°batppt.bat¡±ÒÑÉú³ÉÖÁreleaseÎÄ¼þ¼ÐÏÂ
+echo OKï¼Œreleaseæ–‡ä»¶â€œbatppt.batâ€å·²ç”Ÿæˆè‡³releaseæ–‡ä»¶å¤¹ä¸‹
 del pack.rar
-echo (°´ÈÎÒâ¼üÖØ½¨)
+echo (æŒ‰ä»»æ„é”®é‡å»º)
 pause >nul
 cls
 goto start
